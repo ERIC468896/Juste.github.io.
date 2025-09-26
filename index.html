@@ -3,94 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratoire SEO : Guides HTML, optimisation et techniques</title>
-    <meta name="description" content="Laboratoire SEO dédié aux bonnes pratiques techniques : balises Hn, optimisation images, vitesse de chargement. Guides complets pour booster votre référencement.">
-    <link rel="canonical" href="https://eric468896.github.io/Juste.github.io./">
+    <title>Eric - Marketeur SEO qui apprend l'IA en temps réel</title>
+    <meta name="description" content="Marketeur SEO passionné qui teste et partage ses découvertes en IA, SEO et marketing. Apprentissage documenté, pas de blabla d'expert.">
+    <link rel="canonical" href="https://eric468896.github.io/Juste.github.io/">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Eric - Marketeur SEO">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Eric - Marketeur SEO qui apprend l'IA en temps réel">
+    <meta property="og:description" content="Marketeur SEO passionné qui teste et partage ses découvertes en IA, SEO et marketing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eric468896.github.io/Juste.github.io/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eric - Marketeur SEO qui apprend l'IA en temps réel">
+    <meta name="twitter:description" content="Marketeur SEO passionné qui teste et partage ses découvertes en IA, SEO et marketing.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Navigation */
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .profile-section h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .tagline {
+            color: #3498db;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .bio {
+            font-size: 1.1em;
+            color: #2c3e50;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            text-align: left;
+        }
+        .bio p { margin-bottom: 15px; }
+        .cta {
+            background: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .cta:hover { background: #2980b9; color: white; }
+
+        .interests, .articles-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .interests h2, .articles-section h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .interest-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+        .interest-card:hover { transform: translateY(-5px); }
+        .interest-card h3 { color: #2c3e50; margin-bottom: 10px; font-size: 1.2em; }
+        .interest-card p { color: #444; font-size: 0.95em; }
+
+        .articles-grid { display: grid; gap: 20px; }
+        .article-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #3498db;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .article-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.2);
+        }
+        .article-card h3 { color: #2c3e50; font-size: 1.3em; margin-bottom: 10px; }
+        .article-card p { color: #444; font-size: 0.95em; margin-bottom: 15px; }
+        .article-status {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .status-new { background: #e8f5e8; color: #27ae60; }
+        .status-updated { background: #fff3cd; color: #f39c12; }
+        .status-old { background: #f8d7da; color: #dc3545; }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            font-style: italic;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px 10px; }
+            .header, .interests, .articles-section { padding: 25px; }
+            .profile-section h1 { font-size: 2em; }
+            .tagline { font-size: 1.1em; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Laboratoire SEO technique : Maîtrisez le référencement Google</h1>
+    <div class="container">
+        <!-- Navigation simple -->
+        <div class="nav">
+            <a href="#bio">À propos</a>
+            <a href="#interests">Centres d'intérêt</a>
+            <a href="#articles">Articles</a>
+        </div>
 
-    <div class="intro">
-        <p>Bienvenue dans mon <strong>laboratoire SEO</strong> dédié aux bonnes pratiques techniques ! Ce site regroupe des guides complets pour optimiser votre référencement naturel avec des techniques éprouvées.</p>
-        <p>Explorez nos articles spécialisés en <strong>SEO technique</strong> pour améliorer vos Core Web Vitals et dominer les résultats Google.</p>
+        <div class="header" id="bio">
+            <div class="profile-section">
+                <h1>Salut ! Moi c'est Eric 👋</h1>
+                <div class="tagline">Marketeur SEO qui apprend l'IA en temps réel</div>
+                <div class="bio">
+                    <p>Je suis quelqu'un qui adore apprendre et tester tout ce qui touche au SEO, à l'IA et au marketing.</p>
+                    <p>Sur ce site, je partage mes expérimentations : ce que je teste, ce que je découvre, ce qui marche (et ce qui foire !). Mon truc ? Comprendre comment la technique se traduit en résultats business.</p>
+                    <p><strong>Pas de blabla d'expert, juste de la curiosité et des tests documentés.</strong> Si tu aimes apprendre en même temps que moi, tu es au bon endroit ! 🚀</p>
+                    <a href="#articles" class="cta">Voir mes expérimentations 🚀</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="interests" id="interests">
+            <h2>Ce qui me passionne actuellement</h2>
+            <div class="interest-grid">
+                <div class="interest-card">
+                    <h3>🔍 SEO Business</h3>
+                    <p>Comment traduire les métriques techniques en impact business réel. Parce qu'un site rapide, c'est bien, mais un site qui convertit, c'est mieux !</p>
+                </div>
+                <div class="interest-card">
+                    <h3>🤖 IA Marketing</h3>
+                    <p>Tester l'IA appliquée au marketing. Pas pour remplacer ma créativité, mais pour la démultiplier. Formation HubSpot en cours !</p>
+                </div>
+                <div class="interest-card">
+                    <h3>✍️ Contenu Authentique</h3>
+                    <p>Créer du contenu qui sort du lot. Fini les articles robotisés ! Place aux expériences personnelles et aux apprentissages partagés.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="articles-section" id="articles">
+            <h2>Mes expérimentations documentées</h2>
+            <div class="articles-grid">
+                <a href="vitesse-de-chargement.html" class="article-card">
+                    <h3>Core Web Vitals : Mon parcours pour comprendre ces maudites métriques</h3>
+                    <p>Comment je suis passé de la frustration face aux chiffres rouges PageSpeed à la compréhension business. Mon apprentissage, mes erreurs, mes découvertes.</p>
+                    <span class="article-status status-new">✨ Nouveau format</span>
+                </a>
+                <a href="#" class="article-card">
+                    <h3>Guide SEO technique pour marketeurs</h3>
+                    <p>Les bases du SEO technique expliquées sans jargon de dev. Pour ceux qui veulent comprendre sans devenir développeur.</p>
+                    <span class="article-status status-old">🔄 À refaire</span>
+                </a>
+                <a href="#" class="article-card">
+                    <h3>Optimisation mobile : mes tests</h3>
+                    <p>Mes expériences sur l'optimisation mobile. Ce qui marche, ce qui ne marche pas, et surtout pourquoi.</p>
+                    <span class="article-status status-old">🔄 À refaire</span>
+                </a>
+                <a href="#" class="article-card">
+                    <h3>IA + SEO : mes premiers workflows</h3>
+                    <p>Comment j'utilise l'IA pour booster mon SEO. Mes workflows, mes outils, mes résultats (et mes ratés).</p>
+                    <span class="article-status status-updated">🚧 En cours</span>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="color: #666; font-style: italic;">D'autres articles arrivent au fur et à mesure de mes apprentissages...</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🌱 Site en construction permanente • Apprentissage en public • 2025</p>
+        </div>
     </div>
-
-    <h2>🎯 Guides SEO technique essentiels</h2>
-
-    <div class="articles-grid">
-        <article class="article-card">
-            <h3>La balise Hn : Structure HTML SEO</h3>
-            <p>Guide complet pour optimiser vos <strong>balises H1, H2, H3</strong> et améliorer la structure de vos pages pour Google. Apprenez les bonnes pratiques et évitez les erreurs courantes.</p>
-            <p><strong>Sujets couverts :</strong> Hiérarchie Hn, optimisation H1, mots-clés dans les titres, outils d'analyse</p>
-            <a href="./article1.html">→ Lire le guide balises Hn</a>
-        </article>
-
-        <article class="article-card">
-            <h3>Optimisation des images pour le SEO</h3>
-            <p>Maîtrisez l'<strong>optimisation des images</strong> pour booster votre vitesse de chargement et vos Core Web Vitals. Formats WebP, compression, balise Alt et lazy loading.</p>
-            <p><strong>Sujets couverts :</strong> Formats WebP/AVIF, compression, balises Alt, responsive images, CDN</p>
-            <a href="./article2.html">→ Lire le guide optimisation images</a>
-        </article>
-
-        <article class="article-card">
-            <h3>Vitesse de chargement et Core Web Vitals</h3>
-            <p>Optimisez la <strong>vitesse de chargement</strong> de votre site pour améliorer votre référencement. LCP, FID, CLS, PageSpeed Insights et techniques avancées.</p>
-            <p><strong>Sujets couverts :</strong> Core Web Vitals, PageSpeed Insights, CDN, compression, cache</p>
-            <a href="./vitesse-chargement.html">→ Lire le guide vitesse de chargement</a>
-        </article>
-    </div>
-
-    <h2>🔧 Pourquoi ce laboratoire SEO ?</h2>
-    <p>Ce site est un projet personnel pour mettre en pratique et partager mes connaissances en <strong>SEO technique</strong>. Chaque article applique les bonnes pratiques qu'il enseigne :</p>
-
-    <ul>
-        <li><strong>Structure HTML optimale</strong> avec balises Hn hiérarchisées</li>
-        <li><strong>Balises meta complètes</strong> et canonical tags</li>
-        <li><strong>Contenu riche et expertisé</strong> (2000+ mots par guide)</li>
-        <li><strong>Mots-clés ciblés</strong> avec densité naturelle</li>
-        <li><strong>Maillage interne</strong> stratégique</li>
-    </ul>
-
-    <h2>📈 Objectifs du laboratoire</h2>
-    <div class="objectives">
-        <h3>Formation SEO pratique</h3>
-        <p>Démontrer l'application concrète des techniques SEO sur un site réel, avec mesure des résultats dans Google Search Console.</p>
-
-        <h3>Veille technologique</h3>
-        <p>Suivre les évolutions des algorithmes Google, Core Web Vitals et bonnes pratiques SEO pour maintenir un contenu à jour.</p>
-
-        <h3>Partage de connaissances</h3>
-        <p>Créer des ressources complètes et accessibles pour la communauté SEO, avec exemples pratiques et recommandations actionables.</p>
-    </div>
-
-    <h2>🎓 Méthodologie SEO appliquée</h2>
-    <p>Chaque article de ce laboratoire suit une méthodologie rigoureuse :</p>
-
-    <ol>
-        <li><strong>Recherche de mots-clés</strong> : ciblage précis avec analyse de la concurrence</li>
-        <li><strong>Structure optimisée</strong> : hiérarchie Hn logique et balises meta complètes</li>
-        <li><strong>Contenu exhaustif</strong> : guides de 2000+ mots couvrant tous les aspects</li>
-        <li><strong>Optimisation technique</strong> : canonical, maillage interne, temps de chargement</li>
-        <li><strong>Suivi des performances</strong> : monitoring GSC et ajustements continus</li>
-    </ol>
-
-    <h2>🔗 Ressources SEO complémentaires</h2>
-    <p>Pour approfondir vos connaissances en SEO technique, ces articles se complètent parfaitement :</p>
-
-    <ul>
-        <li><strong>Structure HTML</strong> → Commencez par les <a href="./article1.html">balises Hn</a></li>
-        <li><strong>Performance web</strong> → Optimisez vos <a href="./article2.html">images</a> puis la <a href="./vitesse-chargement.html">vitesse globale</a></li>
-        <li><strong>Expérience utilisateur</strong> → Combinez structure et performance pour des Core Web Vitals optimaux</li>
-    </ul>
-
-    <div class="contact">
-        <h2>📊 Suivi des résultats</h2>
-        <p>Ce laboratoire SEO fait l'objet d'un suivi régulier dans Google Search Console pour mesurer l'efficacité des techniques appliquées. Les résultats et enseignements sont intégrés dans les mises à jour des articles.</p>
-    </div>
-
-    <footer>
-        <p><strong>Laboratoire SEO technique</strong> - Guides pratiques pour optimiser votre référencement naturel</p>
-        <p>Dernière mise à jour : Septembre 2025</p>
-    </footer>
 </body>
 </html>
